@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILLUMEAI</title>
+    <link rel="icon" href="/linking/image copy.png" type="image.png">
+    <style>
+        body {
+            background-image: radial-gradient(circle, #0f1c33, #213c69);
+        }
+        #background {
+            background-image: url(https://i.pinimg.com/564x/98/0c/ca/980cca1665173f76c0d1dabf44b26c03.jpg);
+            background-size: cover;
+            height: 550px;
+            width: 800px;
+            position: absolute;
+            top: 30%;
+            right: 25%;
+            bottom: 50%;
+        }
+        #form {
+            position: absolute;
+            top: 50%;
+            color: black;
+        }
+        #logo {
+            position: absolute;
+            left: 500px;
+            top: 40px;
+        }
+        #form_1, #form_2, #form_3,#form_4, #submit {
+            background-color: #C68FE6;
+            color: black;
+            border: #163469;
+        }
+        #form_1, #form_2, #form_3,#form_4 {
+            position: absolute;
+            width: 200%;
+            height: 40px;
+        }
+        #formdiv1, #formdiv2, #formdiv3,#formdiv4 {
+            color: rgb(255, 255, 255);
+            position: absolute;
+            
+            font-size: 25px;
+        }
+        #formdiv1 { right: -350%; top: -230px; }
+        #form_1 { right: -570%; top: -210px; }
+        #formdiv2 { right: -350%; top: -130px; }
+        #form_2 { right: -570%; top: -110px; }
+        #formdiv3 { right:-350%; top: -30px; }
+        #form_3 { right:-570%; top: -10px; }
+        #formdiv4 { right:-350%; top: 70px; }
+        #form_4 { right:-570%; top: 90px; }
+        #submit {
+            position: relative;
+            right: -450%;
+            top: 40px;
+            height: 50px;
+            width: 90px;
+        }
+        @media (min-width: 600px) {
+            body {
+                background-image: radial-gradient(circle, pink, aqua);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="heading.png" height="100px" id="logo">
+    <div id="background">
+        <form id="form" onsubmit="saveUserData(); return false;">
+            <p id="formdiv1">Enter Name:</p>
+            <input type="text" placeholder="Enter Name" id="form_1">
+            <br><br>
+            <p id="formdiv2">Enter Email:</p>
+            <input type="email" placeholder="Enter Mail" id="form_2">
+            <br><br>
+            <p id="formdiv3">Select D.O.B:</p>
+            <input type="date" id="form_3">
+            <br><br>
+            <p id="formdiv4">Enter your Password:</p>
+            <input type="password" id="form_4">
+            <br><br>
+            <button id="submit" type="submit"><b>SUBMIT</b></button>
+        </form>
+    </div>
+    <script>
+        function saveUserData() {
+            // Get user input
+            const username = document.getElementById('form_1').value;
+            const email = document.getElementById('form_2').value;
+            const dob = document.getElementById('form_3').value;
+            const pass = document.getElementById('form_4').value;
+
+            // Save data in localStorage
+            localStorage.setItem('username', username);
+            localStorage.setItem('email', email);
+            localStorage.setItem('dob', dob);
+            localStorage.setItem('pass', [pass]);
+
+
+            // Redirect to index.html
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light/Dark Mode</title>
+    <style>
+        /* Default Light Theme */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --header-color: #f4f4f4;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --header-color: #1e1e1e;
+}
+
+/* Apply Variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--header-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+button {
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <button id="theme-toggle">🌙</button>
+    </header>
+    <main>
+    
+    </main>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+        const themeToggleButton = document.getElementById("theme-toggle");
+        const currentTheme = localStorage.getItem("theme") || "light";
+    
+        // Apply the saved theme on load
+        document.documentElement.setAttribute("data-theme", currentTheme);
+    
+        // Update button text based on theme
+        themeToggleButton.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+    
+        themeToggleButton.addEventListener("click", () => {
+            // Toggle between light and dark
+            const newTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", newTheme);
+    
+            // Save the new theme in localStorage
+            localStorage.setItem("theme", newTheme);
+    
+            // Update button text
+            themeToggleButton.textContent = newTheme === "dark" ? "☀️" : "🌙";
+        });
+    });
+    </script>
+</body>
+</html>

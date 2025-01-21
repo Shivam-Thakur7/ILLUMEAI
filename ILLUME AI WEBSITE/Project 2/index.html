@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILLUME-AI</title>
+    <link rel="icon" href="/linking/image copy.png">
+    
+    <style>
+        body{
+            background-color:#65446d;
+        }
+        #div{
+        height: 100%;
+        width: 100%;
+        background-image: url(background\ gif.gif);
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        }
+        #container{
+        position: absolute
+        ;
+        bottom: -650px;
+        left: 0%;
+        z-index: 1;
+        height: 900px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        }
+        #box1{
+            background-image: url(image.png);
+            background-size: cover;
+            height: 300px;
+            width: 300px;
+            border-radius: 20%;  
+        }
+        #box1h{
+            position: relative;
+            left: 10px;
+            top: 120px;
+            color: transparent;
+        }
+        #box1p{
+            position: relative;
+            left: 10px;
+            top: 120px;
+            color: transparent;
+        }
+        #box1:hover{
+            transform: scale(1.1);
+            
+        }
+        #box1:hover #box1h{
+            color: white;
+        }
+        #box1:hover #box1p{
+            color: white;
+        }
+        #box2{
+            height: 300px;
+            width: 300px;
+            border-radius: 20%;
+            background-image: url(image\ copy\ 4.png);
+            background-size: cover;
+        }
+        #box2h{
+            position: relative;
+            left: 10px;
+            top: 80px;
+            color: transparent;
+        }
+        #box2p{
+            position: relative;
+            left: 10px;
+            top: 70px;
+            color: transparent;
+        }
+        #box2:hover{
+            transform: scale(1.1);
+        }
+        #box2:hover #box2h{
+            color: white;
+        }
+        #box2:hover #box2p{
+            color: white;
+        }
+        #box3{
+            height: 300px;
+            width: 300px;
+            border-radius: 20%;
+            background-image: url(image\ copy\ 3.png);
+            background-size: cover;
+            background-position-y:-90px ;
+        }
+        #box3h{
+            position: relative;
+            left: 10px;
+            top: 120px;
+            color: transparent;
+        }
+        #box3p{
+            position: relative;
+            left: 10px;
+            top: 110px;
+            color: transparent;
+        }
+        #box3:hover{
+            transform: scale(1.1);
+        }
+        #box3:hover #box3h{
+            color: white;
+        }
+        #box3:hover #box3p{
+            color: white;
+        }
+        #image{
+            position: absolute;
+            top: 130px;
+            left: 330px;
+            animation: image 3s linear 0s 1 reverse;
+            height: 600px;
+            width: 901.125px;
+            z-index: 1;
+        }
+        /* @keyframes image{
+            from{
+                height: 120px;
+                width: 160.45px;
+                transform: translate(0px,0px);
+            }
+            to{
+                height: 300px;
+                width: 401.125px;
+                transform: translate(-200px,0px);
+            }
+        } */
+        #gif{
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            right: 70px;
+            border-radius: 5%;
+        }
+        #div2{
+            position: absolute;
+            top: 1120px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 700px;
+            width: 100%;
+            
+        }
+        #navbar{
+            position: absolute;
+            top: 10px;
+            left: 400px;
+            height: 70px;
+            width: 760px;
+            background-color: #e271b8;
+        }
+        #home{
+            color: white;
+            position: absolute;
+            top: 0px;
+            left: 10px;
+        }
+        #aboutus{
+            color: white;
+            position: absolute;
+            top: 0px;
+            left: 100px;
+        }
+        #illustrations{
+            color: white;
+            position: absolute;
+            top: 0px;
+            left: 235px;
+        }
+        #feedback{
+            color: white;
+            position: absolute;
+            top: 0px;
+            left: 445px;
+        }
+        #community{
+            color: white;
+            position: absolute;
+            top: 0px;
+            left: 590px;
+        }
+        #gifbox1{
+            height: 400px;
+            width: 900px;
+            position: absolute;
+            top: 150px;
+            left: 100px;
+            color: white;
+        }
+        #gifbox2{
+            height: 400px;
+            width: 600px;
+            position: absolute;
+            top: 90px;
+            left: 0px;
+            color: white;
+        }
+        #profile{
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-image: url(profile.png);
+            background-size: contain;
+        }
+        #info {
+            color: white;
+            display: none;
+            position: absolute;
+            top: 90px;
+            right: 1px;
+            background-color: #a091ff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        #profile:hover #info {
+            display: block;
+            height: 300px;
+            width: 300px;
+        }
+        #edit{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-image: none;
+            z-index: 1;
+            position: relative;
+            top: 50px;
+            border: solid 2px black;
+            
+            
+        }
+        #profile:hover #edit {
+            z-index: 1;
+            height: 400px;
+            width: 400px;
+            background-image: url(https://cdn-icons-png.freepik.com/256/4410/4410903.png?semt=ais_hybrid);
+        }
+        #bot{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-image: url(https://i.pinimg.com/originals/aa/29/2c/aa292c3ff3b186e9389bbee3a2d0d591.gif);
+            background-size: cover;
+            background-position: 45%; 
+            position: fixed;
+            bottom: 0%;
+            right: 10px;  
+            z-index: 1;    
+        }
+        #div3{
+            position: absolute;
+            top: 1800px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 700px;
+            width: 100%;
+        }
+        #bulb{
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            left: 80px;
+            top: -10px;
+            border-radius: 5%;
+        }
+        #tips{
+            height: 400px;
+            width: 900px;
+            position: absolute;
+            top: -10px;
+            right: -140px;
+            color: white;
+        }
+        #tricks{
+            height: 400px;
+            width: 600px;
+            position: absolute;
+            top: 90px;
+            right: 200px;
+            color: white;
+        }
+        #menu{
+            height: 25px;
+            width: 35px;
+            background-image: url(menu.png);
+            background-size: cover;
+            z-index: 1;
+            position: absolute;
+            top: 15px;
+            left: 5px;
+        }
+        #a{
+            background-color: transparent;
+            height: 210px;
+            width: 180px;
+            position: absolute;
+            top: 60px;  
+            border-radius: 10px;
+        }
+        #menu:hover #a {
+            background-color: #b19af0;
+            color: white;
+
+        }
+        #atext{
+            background-color: transparent;
+            position: absolute;
+            top: 10px; 
+            left: 50px; 
+            text-decoration: none;
+            color: transparent;
+            border-radius: 10px;
+        }
+        #menu:hover #atext {
+            
+            color: white;
+
+        }
+        #btext{
+            background-color: transparent;
+            position: absolute;
+            top: 40px; 
+            left: 30px; 
+            text-decoration: none;
+            color: transparent;
+            border-radius: 10px;
+        }
+        #menu:hover #btext {
+            
+            color: white;
+
+        }
+        #ctext{
+            background-color: transparent;
+            position: absolute;
+            top: 70px; 
+            left: 10px; 
+            text-decoration: none;
+            color: transparent;
+            border-radius: 10px;
+        }
+        #menu:hover #ctext {
+            
+            color: white;
+
+        }
+        #dtext{
+            background-color: transparent;
+            position: absolute;
+            top: 100px;  
+            left: 30px;
+            text-decoration: none;
+            color: transparent;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        #menu:hover #dtext {
+            
+            color: white;
+
+        }
+        #etext{
+            background-color: transparent;
+            position: absolute;
+            top: 130px;  
+            left: 20px;
+            text-decoration: none;
+            color: transparent;
+            border-radius: 10px;
+        }
+        #menu:hover #etext {
+            color: white;
+        }
+        #footer{
+            background-color: #573b5e;
+            height: 450px;
+            width: 100%;
+            position: absolute;
+            bottom: -2100px;
+            display: flex;
+            justify-content: space-evenly;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+:root {
+    --bg-color: #65446d;
+    --text-color: #000000;
+    --header-color: #f4f4f4;
+
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --header-color: #1e1e1e;
+}
+
+/* Apply Variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--header-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+button {
+    background: none;
+    height: 100px;
+    width: 100px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 570px;
+    right: 10px;
+    z-index: 1;
+    
+}
+
+button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+#theme-toggle{
+    border-radius: 50%;
+}
+
+    </style>
+</head>
+<body>
+    
+   <div id="div">
+    <img src="New name of the project.png" id="image">
+    <div id="navbar">
+    <a href="#container"><h2 id="home">HOME</h2></a>
+    <a href="/linking/about_us.html" target="_blank"><h2 id="aboutus">ABOUT-US</h2></a>
+    <a href="/linking/illustration.html" target="_blank"><h2 id="illustrations">ILLUSTRATIONS</h2></a>
+    <a href="/linking/feedback.html" target="_blank"><h2 id="feedback">FEEDBACK</h2></a>
+    <a href="/linking/community1.html" target="_blank"><h2 id="community">COMMUNITY</h2></a>
+</div>
+   </div>
+
+   <div id="container">
+        <div id="box1"><h1 id="box1h">Multiple AI Modes</h1>
+        <h3 id="box1p">Whether you're looking for high quality or faster generation, Illume AI will cover your needs.</h3>
+    </div>
+        <div id="box2"><h1 id="box2h">Pick style, color filters, and perspective</h1>
+        <h3 id="box2p">No need for long or complex prompts, just use the presets!</h3>
+    </div>
+        <div id="box3"><h1 id="box3h">High-end textures and realism</h1>
+            <h3 id="box3p">Skin tones, textures, details—everything is there</h3></div>
+   </div>
+   <div id="div2">
+    <img src="insert some_code here.gif" id="gif">
+        <div id="gifbox1"><h1><big><u>Introducing ILLUME-AI Image Generator</u></big></h1>
+        <div id="gifbox2"><h2>Where art meets technology <br><br>
+            "Leveraging deep learning algorithms for photorealistic image generation."
+            <br><br>
+        "Elevate your brand's visual identity with AI-generated images." <br><br>
+        "Dream it. Generate it. Make it real."</h2>
+        </div>
+        </div> 
+        
+   </div>
+   <div id="profile">
+        <div id="info">
+            <div id="edit"></div>
+        </div>
+   </div>
+        <a href="https://chat.cxgenie.ai?aid=f8bcc3b4-0a0e-4757-9918-4c2bc6caa3b3&lang=en" target="_blank">
+        <img src="https://i.pinimg.com/originals/aa/29/2c/aa292c3ff3b186e9389bbee3a2d0d591.gif" id="bot">
+    </a>
+    <div id="div3">
+        <img src="bulb.gif" id="bulb">
+        <div id="tips"><h1><big><u>Tips and Variations</u>💡</big></h1></div><br>
+        <div id="tricks">
+            <ul>
+           <li><h2>Experiment with different prompts, styles, and parameters.</li></h2><br>
+           <li> <h2>Use reference images for better results.</h2></li>
+            <br>
+        <li><h2>Combine AI-generated images with manual editing.</h2></li> <br>
+       <li><h2>Try different tools and models for unique results.</h2></li> 
+    </ul>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="a">
+           <a href="#container" id="atext"><h3>HOME</h3></a> 
+           
+           <a href="/linking/about_us.html" target="_blank" id="btext"><h3>ABOUT-US</h3></a> 
+           
+           <a href="/linking/illustration.html" target="_blank" id="ctext"><h3>ILLUSTRATIONS</h3></a>
+
+           <a href="/linking/feedback.html" id="dtext" target="_blank"><h3>FEEDBACK</h3></a>  
+
+           <a href="/linking/community1.html" id="etext" target="_blank"><h3>COMMUNITY</h3></a> 
+        </div>
+   </div>
+   <div id="footer">
+    <div>
+        <h3>TOOLS</h3>
+        <a href="#"><p>AI Image Generator</p></a>
+        <a href="#"><p>Image Upscaler</p></a>
+        <a href="#"><p>Background Remover</p></a>
+        <a href="#"><p>Photo Editor</p></a>
+    </div>
+    <div>
+        <h3>INFORMATION</h3>
+        <a href="#"><p>Pricing</p></a>
+        <a href="#"><p>About Us</p></a>
+        <a href="#"><p>API</p></a>
+        <a href="#"><p>Jobs</p></a>
+        <a href="#"><p>Sell Content</p></a>
+        <a href="#"><p>Illume-AI Brand Guidelines</p></a>
+        <a href="#"><p>Events</p></a>
+        <a href="#"><p>Search Trends</p></a>
+        <a href="#"><p>Blog</p></a>
+    </div>
+    <div>
+        <h3>LEGAL</h3>
+        <a href="#"><p>Terms of use</p></a>
+        <a href="#"><p>License agreement</p></a>
+        <a href="#"><p>Privacy policy</p></a>
+        <a href="#"><p>Copyright information</p></a>
+        <a href="#"><p>Cookies policy</p></a>
+        <a href="#"><p>Cookies Settings</p></a>
+        <br>
+        <h3>SUPPORT</h3>
+        <a href="#"><p>Pixie</p></a>
+        <a href="#"><p>Search Guide</p></a>
+        <a href="#"><p>Contact</p></a>
+        
+    </div>
+    <div>
+       
+        <h3>SOCIAL MEDIA</h3>
+        <a href="https://www.facebook.com/?_rdr" target="_blank">
+        <img src="Facebook.png" height="30px" width="30px">
+        </a>&nbsp;
+        <a href="https://x.com/home?lang=en" target="_blank"><img src="X.png" height="30px" width="30px"></a>&nbsp;
+        <a href="https://in.pinterest.com/" target="_blank"><img src="pinterest.png" height="30px" width="30px"></a>&nbsp;
+        <a href="https://www.instagram.com/" target="_blank"><img src="instagram.png" height="30px" width="30px"></a>&nbsp;
+        <br>
+        <a href="https://www.youtube.com/" target="_blank"><img src="youtube .png" height="30px" width="30px"></a>&nbsp;
+        <a href="https://www.linkedin.com/home" target="_blank"><img src="in.png" height="30px" v>&nbsp;</a>
+        <a href="https://discord.com/" target="_blank"><img src="discord.png" height="30px" width="30px"></a>&nbsp;
+        <a href="https://www.reddit.com/?rdt=45544" target="_blank"><img src="reddit.png" height="30px" width="30px"></a>&nbsp;
+    </div>
+
+   </div> 
+   <header>
+    <div>
+        <button id="theme-toggle">🌙</button>
+    </div>
+</header>
+
+   <script>
+    // Fetch data from localStorage
+    const username = localStorage.getItem('username') || 'Guest';
+    const email = localStorage.getItem('email') || 'Not provided';
+    const dob = localStorage.getItem('dob') || 'Not provided';
+    const pass = localStorage.getItem('pass') || 'Not provided';
+
+    // Display user info in the hover box
+    document.getElementById('info').innerHTML = `
+        <p><strong>Username:</strong> ${username}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>D.O.B:</strong> ${dob}</p>
+        <p><strong>Password:</strong> ${pass}</p>
+    `;
+</script>
+
+
+</main>
+<script>document.addEventListener("DOMContentLoaded", () => {
+    const themeToggleButton = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme") || "light";
+
+    // Apply the saved theme on load
+    document.documentElement.setAttribute("data-theme", currentTheme);
+
+    // Update button text based on theme
+    themeToggleButton.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+
+    themeToggleButton.addEventListener("click", () => {
+        // Toggle between light and dark
+        const newTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+
+        // Save the new theme in localStorage
+        localStorage.setItem("theme", newTheme);
+
+        // Update button text
+        themeToggleButton.textContent = newTheme === "dark" ? "☀️" : "🌙";
+    });
+});
+</script>
+   
+   
+   
+</body>
+</html>

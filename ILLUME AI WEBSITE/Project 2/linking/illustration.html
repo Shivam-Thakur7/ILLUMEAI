@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustrations - IllumeAI</title>
+    <link rel="icon" href="image copy.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#65446d ;
+            color: black;
+        }
+
+        header {
+            background-color: #e271b8;
+            color: #e0ff90;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        #gallery-item{
+            color: transparent;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: 300px;
+            background-image: url(alien.jpg);
+            background-size: cover;
+            background-position: 300px;
+            z-index: 1;
+        }
+        #gallery-item:hover{
+            color: white;
+        }
+        #gallery-item1 {
+            color: transparent;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: 300px;
+            background-image: url(chinese\ painting.png);
+            background-size: cover;
+            background-position: 300px;
+        }
+        #gallery-item1:hover{
+            color: white;
+        }
+        #gallery-item2 {
+            color: transparent;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: 300px;
+            background-image: url(tokyo\ painting.jpg);
+            background-size: cover;
+            background-position: 300px;
+        }
+        #gallery-item2:hover{
+            color: black;
+        }
+        #gallery-item3{
+            color: transparent;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: 300px;
+            background-image: url(hulk.jpg);
+            background-size: cover;
+            background-position: 300px;
+        }
+        #gallery-item3:hover{
+            color: white;
+        }
+        
+
+        #gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #gallery-item p {
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #e271b8;
+            color: #e0ff90;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        #h2{
+            color: white;
+        }
+        h3{
+            position: relative;
+            left: 10px;
+            top: 220px;
+        }
+        #h31{
+            position: relative;
+            left: 10px;
+            top: 180px;
+        }
+        #h32{
+            position: relative;
+            left: 10px;
+            top: 140px;
+        }
+        #project{
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            top: 80px;
+            /* border: solid black 2px; */
+            height: 700px;
+            width: 100%;
+        }
+        .scroll{
+            height: 250px;
+            width: 250px;
+        }
+        #reverse{
+            display: flex;
+            justify-content: space-evenly;
+            position: absolute;
+            top: 450px;
+            left: 0%;
+        }
+        #submit{
+        background-color: #5694ff;
+        color: black;
+        border-width: 4px;
+        border-color: #163469;
+        position: absolute;
+        right: 50%;
+        height: 50px;
+        width: 90px;
+        z-index: 1;
+    }
+        #button{
+            border-radius: 2px;
+            color: black;
+            background-color: #b28cbb;
+            position: absolute;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            top: 95px;
+            right: 650px;
+            height: 50px;
+            width: 190px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Illustrations - IllumeAI</h1>
+    </header>
+<form action="https://www.freepik.com/ai/image-generator" target="_blank">
+    <button id="button">Generate</button>
+</form>
+<div id="project">
+    <marquee behaviour="slide" direction="right" scrollamount="10">
+        <div>
+        <a href="/image1.html"><img src="/marquee1.png" class="scroll"></a>
+        <a href="/image2.html"><img src="/marquee2.png" class="scroll"></a>
+        <a href="/image3.html"><img src="/marquee3.png" class="scroll"></a>
+        <a href="/image4.html"><img src="/marquee4.png" class="scroll"></a>
+        <a href="/image5.html"><img src="/marquee5.png" class="scroll"></a>
+        <a href="/image6.html"><img src="/marquee6.png" class="scroll"></a>
+        </div>
+    </marquee>
+</div>
+    <div id="reverse">
+        <marquee behaviour="slide" direction="left" scrollamount="10">
+            <div>
+            <a href="/reverse1.html"><img src="/reverse1.png" class="scroll"></a>
+            <a href="/reverse2.html"><img src="/reverse2.png" class="scroll"></a>
+            <a href="/reverse3.html"><img src="/reverse3.png" class="scroll"></a>
+            <a href="/reverse4.html"><img src="/reverse4.png" class="scroll"></a>
+            <a href="/reverse5.html"><img src="/reverse5.png" class="scroll"></a>
+            <a href="/reverse6.html"><img src="/reverse6.png" class="scroll"></a>
+        </div>
+        </marquee>
+    </div>
+    
+   
+
+    <!-- <footer>
+        <p>&copy; 2024 IllumeAI. All Rights Reserved.</p>
+    </footer> -->
+</body>
+
+</html>
